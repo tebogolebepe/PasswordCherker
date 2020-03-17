@@ -3,9 +3,9 @@ public class PasswordCheck {
 
         PasswordCheck pass = new PasswordCheck();
 
-        String password2 = "gjhjy1uki@ljyY";
-        pass.PasswordIsOk(password2);
-
+        String password2 = "Tebolebepe@45";
+        //pass.PasswordIsOk(password2);
+        System.out.println(pass.PasswordIsOk(password2));
 
 
     }
@@ -74,37 +74,37 @@ public class PasswordCheck {
                         }
                         if (count2 == 0) {
                             throw new Exception("Password must contain at least small letter");
-                        } else {
-                            //PasswordIsOk(password);
-                            System.out.println("Password is ok");
                         }
+//                        else {
+//                            //PasswordIsOk(password);
+//                            System.out.println("Password is ok");
+//                        }
                     }
                 }
             }
 
         } catch (Exception e) {
             System.out.println(e);
+
         }
-        return  false;
+       return true;
+
     }
 
     public boolean PasswordIsOk(String password) {
-        if(!password.isEmpty() && password.length() >= 8)
-        {
-            if (PasswordIsValid(password)){
+        if(!password.isEmpty() && password.length() >= 8) {
+            if (PasswordIsValid(password)) {
                 return true;
 
+            } else {
+
+                return false;
             }
         }
-        else
-            {
-
-            return false;
-        }
-        return true;
-
+        return false;
 
     }
+
 }
 
 
